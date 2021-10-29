@@ -3,11 +3,11 @@ pipeline {
   stages {
     stage('image build') {
       steps {
-        sh 'docker build -t hello'
+        sh 'docker build -t hello .'
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         sh 'docker run -d -p 3015:3000 hello'
       }
