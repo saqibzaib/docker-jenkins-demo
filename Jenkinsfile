@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('container run') {
       steps {
         sh 'docker run -d -p 3015:3000 hello'
       }
